@@ -6,7 +6,8 @@ namespace ConsoleApp2
     {
         public static void Main(string[] args) 
         {
-            Console.WriteLine("Hello World");
+            BodyMassIndex bodyMassIndex = new BodyMassIndex();
+            bodyMassIndex.Run();
         }
     }
 }
