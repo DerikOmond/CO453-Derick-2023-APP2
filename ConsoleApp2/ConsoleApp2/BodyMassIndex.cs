@@ -8,9 +8,25 @@ namespace ConsoleApp2
 {
     public class BodyMassIndex
     {
+        private double wight;
+
         private double wightInKilograms;
+        private int weightInPounds;
+        private int weightInStone;
+
+        private string kilograms = "kilograms";
+        private string pounds = "pounds";
+        private string stone = "stone";
+
+        private double height;
 
         private double heightInCentimetres;
+        private int heightInFeet;
+        private int heightInInches;
+
+        private string centimetres = "centimetres";
+        private string feet = "feet";
+        private string inches = "inches";
 
         private double BMI;
         public void Run()
@@ -41,13 +57,15 @@ namespace ConsoleApp2
         private void AskWeight()
         {
             Console.Write("\nWhat is your current weight in kilograms?\n> ");
-            wightInKilograms = Convert.ToDouble(Console.ReadLine());
+            wight = Convert.ToDouble(Console.ReadLine());
         }
 
         private void AskHeight()
         {
             Console.Write("\nWhat is your current height in centimetres\n> ");
-            heightInCentimetres = Convert.ToDouble(Console.ReadLine());
+            height = Convert.ToDouble(Console.ReadLine());
         }
+
+
     }
 }
