@@ -21,11 +21,9 @@ namespace ConsoleApp2
 
         private double weight;
 
-        private double wightInKilograms;
+        private double weightInKilograms;
         private int weightInPounds;
         private int weightInStone;
-
-        
 
         private double height;
 
@@ -41,6 +39,7 @@ namespace ConsoleApp2
         {
             DisplayHeader();
             AskMeasurments();
+            CalculateBMI();
 
 
             Console.ReadLine();
@@ -113,9 +112,47 @@ namespace ConsoleApp2
                 }
             }
             while (correctOption2);
-            
         }
 
+        private void CalculateBMI()
+        {
+            if (weight == 1 && height == 1)
+            {
+                BMI = weightInKilograms / Math.Pow((heightInCentimetres/100), 2);
+            }
+            else if (weight == 1 && height == 2)
+            {
+                BMI = weightInKilograms / Math.Pow((heightInFeet * 0.3048), 2);
+            }
+            else if (weight == 1 && height == 3)
+            {
+                BMI = weightInKilograms / Math.Pow((heightInInches * 0.0254), 2);
+            }
+            else if (weight == 2 && height == 1)
+            {
+                BMI = (weightInPounds * 0.453592) / Math.Pow((heightInCentimetres / 100), 2);
+            }
+            else if (weight == 2 && height == 2)
+            {
+                BMI = (weightInPounds * 0.453592) / Math.Pow((heightInFeet * 0.3048), 2);
+            }
+            else if (weight == 2 && height == 3)
+            {
+                BMI = (weightInPounds * 0.453592) / Math.Pow((heightInInches * 0.0254), 2);
+            }
+            else if (weight == 3 && height == 1)
+            {
+                BMI = (weightInStone * 6.35029) / Math.Pow((heightInCentimetres / 100), 2);
+            }
+            else if (weight == 3 && height == 2)
+            {
+                BMI = (weightInStone * 6.35029) / Math.Pow((heightInFeet * 0.3048), 2);
+            }
+            else if (weight == 3 && height == 3)
+            {
+                BMI = (weightInStone * 6.35029) / Math.Pow((heightInInches * 0.0254), 2);
+            }
+        }
 
     }
 }
