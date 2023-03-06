@@ -8,6 +8,11 @@ namespace ConsoleApp2
 {
     public class BodyMassIndex
     {
+        private double wightInKilograms;
+
+        private double heightInCentimetres;
+
+        private double BMI;
         public void Run()
         {
             DisplayHeader();
@@ -35,14 +40,14 @@ namespace ConsoleApp2
 
         private void AskWeight()
         {
-            Console.Write("\nWhat is your current weight?\n>");
-            Console.ReadLine();
+            Console.Write("\nWhat is your current weight in kilograms?\n> ");
+            wightInKilograms = Convert.ToDouble(Console.ReadLine());
         }
 
         private void AskHeight()
         {
-            Console.Write("\nWhat is your current height\n>");
-            Console.ReadLine();
+            Console.Write("\nWhat is your current height in centimetres\n> ");
+            heightInCentimetres = Convert.ToDouble(Console.ReadLine());
         }
     }
 }
